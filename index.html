@@ -1,0 +1,566 @@
+<!DOCTYPE>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/animate.3.5.2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.3.2.3.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="script/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="script/jquery.mixitup.2.1.11.min.js"></script>
+    <link rel="icon" href="images/code.png">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script type="text/javascript" src="script/script.js"></script>
+</head>
+
+<body>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-103185575-1', 'auto');
+        ga('send', 'pageview');
+        $(function () {
+            const filterList = {
+                init: function () {
+                    $('#portfoliolist').mixItUp({
+                        selectors: {
+                            target: '.portfolio',
+                            filter: '.filter'
+                        },
+                        load: {
+                            filter: '.featured'
+                        },
+                    });
+                }
+            };
+            filterList.init();
+        });
+    </script>
+    <div id="headercontainer" class="headercontainer">
+        <div id="header1" class="header1"> <a id="headera" class="header navlink" href="#Home">Home</a> <a id="headera"
+                class="header navlink" href="#skills">Skills</a> <a id="headera" class="header navlink" href="#project">Projects</a>
+            <a id="headera" class="header navlink" href="#contact">Contact</a></div>
+    </div>
+    <div id="Home" class="home">
+        <div class="pic-container">
+            <div class="mypicinside"></div>
+            <div class="home-text">
+                <h1>Hi! I'm Muhammad Usman</h1>
+                <h3>Full Stack Web Developer</h3>
+            </div>
+        </div>
+    </div>
+    <a href="#skills" class="arrow-container animated fadeInDown">
+        <div id="arrowo">
+            <div id="arrow-container" class="arrow-container animated ">
+                <div class="arrow-2"> <i class="fa fa-arrow-circle-down" aria-hidden="true"></i></div>
+                <div class="arrow-1 animated hinge infinite zoomIn"></div>
+            </div>
+        </div>
+    </a>
+    <section id="skills" class="skillspage">
+        <div class="insideskills">
+            <h2>Skills</h2>
+            <div id="logo">
+                <div class="description javascript-container">
+                    <div class="title">Javascript</div> <img src="images/javascript.png" alt="Javascript image" />
+                </div>
+                <div class="description react-container">
+                    <div class="title">React</div> <img src="images/react.png" alt="React Image" />
+                </div>
+                <div class="description redux-container ">
+                    <div class="title">Redux</div> <img src="images/redux.png" alt="redux image" />
+                </div>
+                <div class="description nodejs-container">
+                    <div class="title">Node.js</div> <img src="images/nodejs.png" alt="Node.js/Express Image" />
+                </div>
+                <div class="description git-container">
+                    <div class="title">Git</div> <img src="images/git.png" alt="Git image" />
+                </div>
+                <div class="description algorithms-container">
+                    <div class="title">Algorithms</div> <img src="images/algorithms.png" alt="Data Structures and Algorithms image" />
+                </div>
+                <div class="description jquery-container">
+                    <div class="title">jQuery</div> <img src="images/jquery.png" alt="jQuery image" />
+                </div>
+                <div class="description sql-container">
+                    <div class="title">Sql</div> <img src="images/sql.png" alt="Sql image" />
+                </div>
+                <div class="description socket-container">
+                    <div class="title">Socket.io</div> <img src="images/socket.gif" alt="Socket Image" />
+                </div>
+                <div class="description angularjs-container">
+                    <div class="title">AngularJs</div> <img src="images/angularjs1.svg" alt="angular js image" />
+                </div>
+                <div class="description css-container">
+                    <div class="title">Css</div> <img src="images/css.png" alt="css image" />
+                </div>
+                <div class="description sass-container">
+                    <div class="title">Sass</div> <img src="images/sass.png" alt="Sass Image" />
+                </div>
+                <div class="description wordpress-container">
+                    <div class="title">Wordpress</div> <img src="images/wordpress.png" alt="WordPress image" />
+                </div>
+                <div class="description ruby-container">
+                    <div class="title">Ruby</div> <img src="images/ruby.png" alt="Ruby Image" />
+                </div>
+                <div class="description bootstrap-container">
+                    <div class="title">Bootstrap</div> <img src="images/bootstrap.png" alt="bootstrap Image" />
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="project" class="projectpage">
+        <div class="insideproject">
+            <h2>Projects</h2>
+            <div id="portfolio">
+                <div class="projects-container">
+                    <ul id="filters" class="filters">
+                        <li><span id="allShow" class="filter" data-filter=".featured, .nodejs, .react, .ruby, .socketio, .javascript, .php, .wordpress">All</span></li>
+                        <li><span class="filter active" data-filter=".featured">Featured</span></li>
+                        <li><span class="filter" data-filter=".nodejs">Node.js</span></li>
+                        <li><span class="filter" data-filter=".react">React/Redux</span></li>
+                        <li><span class="filter" data-filter=".php">PHP</span></li>
+                        <li><span class="filter" data-filter=".ruby">Ruby on Rails</span></li>
+                        <li><span class="filter" data-filter=".wordpress">WordPress</span></li>
+                        <li><span class="filter" data-filter=".socketio">Socket.io</span></li>
+                        <li><span class="filter" data-filter=".javascript">Vanilla Javascript/jQuery</span></li>
+                    </ul>
+                    <div id="portfoliolist" class="portfoliolist">
+
+                        <div class="port1 ebay-fav-search portfolio featured react nodejs">
+                            <a href="https://ebay-fav-search.herokuapp.com/" target="_blank">
+                                <div class="overlay-container"> <img src="https://raw.githubusercontent.com/askflow1111/eBay-Favorite-Search/master/client/src/images/screenshot.png"
+                                        alt="eBay-Favorite-Search Project Picture" class="image" />
+                                    <div class="overlay">
+                                        <div class="text wrap-text">
+                                            <h4>eBay Favorite Search</h4>
+                                            eBay Favorite Search App allows you to instantly search items from eBay,
+                                            and saves them in your favorite list through Local-Storage and Database
+                                            thus allowing you to look and manage them later on.
+                                            <br><br>
+                                            <div class="skillsuse">Skills: React/Redux, eBay API, Node.js/Express,
+                                                Auth, Javascript, and PostgreSQL</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/askflow1111/eBay-Favorite-Search" target="_blank">
+                                <div class="github">See On Github</div>
+                            </a>
+                        </div>
+
+                        <div class="port1 vtube portfolio featured nodejs socketio">
+                            <a href="http://www.v2ube.com/" target="_blank">
+                                <div class="overlay-container"> <img src="https://github.com/askflow1111/V2ube/blob/master/vtube.png?raw=true"
+                                        alt="Vtube Project Image" class="image" />
+                                    <div class="overlay">
+                                        <div class="text wrap-text">
+                                            <h4>V-Tube</h4> An app which allows people to create different rooms where
+                                            people
+                                            can chat in real-time and watch videos together with synchronize
+                                            functionality.
+                                            <br> <br>
+                                            <div class="skillsuse">Skills: Node.js/Express, Sockets, Youtube API,
+                                                Javascript, DOM</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/askflow1111/V2ube" target="_blank">
+                                <div class="github">See On Github</div>
+                            </a>
+                        </div>
+
+                        <div class="port1 webmood portfolio featured nodejs">
+                            <a href="http://trackwebmood.herokuapp.com/" target="_blank">
+                                <div class="overlay-container"> <img src="https://raw.githubusercontent.com/askflow1111/Track-Web-Mood/master/WebMood.png"
+                                        alt="WebMood Project Picture" class="image" />
+                                    <div class="overlay">
+                                        <div class="text wrap-text">
+                                            <h4>Track Web-Mood</h4> Track Web-Mood is an analytic dashboard app that
+                                            provides
+                                            clients with insights into website morale by analyzing the sentiment of
+                                            text
+                                            written on the website. <br> <br>
+                                            <div class="skillsuse">Skills: Express/Node-js for Back-end, PostgreSQL for
+                                                Database, ChartJs library
+                                                for Charts, Ejs and Javascript for Front-end</div> <br>
+                                            <div class="skillsuse">APIs: Watson-Developer-Cloud, Html-To-Text, Request</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/askflow1111/Track-Web-Mood" target="_blank">
+                                <div class="github">See On Github</div>
+                            </a>
+                        </div>
+
+                        <div class="port1 todolist-react-and-express portfolio featured react nodejs">
+                            <a href="https://todolistreactexpress.herokuapp.com/" target="_blank">
+                                <div class="overlay-container"> <img src="https://raw.githubusercontent.com/askflow1111/TodoList-React-and-Express/master/TodoList-React-and-Express.png"
+                                        alt="TodoList-React-and-Express Project Picture" class="image" />
+                                    <div class="overlay">
+                                        <div class="text wrap-text">
+                                            <h4>TodoList-React-and-Express</h4> TodoList with CRUD functionality, which
+                                            mean
+                                            you can create, read, edit/update, and delete the items from the list! <br>
+                                            <br>
+                                            <div class="skillsuse">Skills: React, Node.js/Express, PostgreSQL, and
+                                                Javascript</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/askflow1111/TodoList-React-and-Express" target="_blank">
+                                <div class="github">See On Github</div>
+                            </a>
+                        </div>
+
+                        <div class="port1 rails-learn-just-anything portfolio featured ruby">
+                            <a href="https://learnjustanything.herokuapp.com/" target="_blank">
+                                <div class="overlay-container"> <img src="https://raw.githubusercontent.com/askflow1111/Learn-Just-Anything/master/LearnJustAnything.png"
+                                        alt="Ruby On Rails Learn Just Anything App Project Image" class="image" />
+                                    <div class="overlay">
+                                        <div class="text wrap-text">
+                                            <h4>Ruby On Rails Learn-Just-Anything</h4> Website giving users a platform
+                                            to upload
+                                            articles on various topics. Each user has his/ her own separate profile
+                                            listing
+                                            all his/her article. Users can add feedbacks in the comment section of each
+                                            article.
+                                            <br> <br>
+                                            <div class="skillsuse">Skills: Ruby on Rails, Devise, PostgreSQL, and Erb</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/askflow1111/Learn-Just-Anything" target="_blank">
+                                <div class="github">See On Github</div>
+                            </a>
+                        </div>
+
+                        <div class="port1 cpu-usage portfolio featured nodejs react">
+                            <a href="https://cpuusage.herokuapp.com/" target="_blank">
+                                <div class="overlay-container"> <img src="https://raw.githubusercontent.com/askflow1111/CPU-Usage/master/client/public/screenshot.png"
+                                        alt="Cpu-Usage Project Picture" class="image" />
+                                    <div class="overlay">
+                                        <div class="text wrap-text">
+                                            <h4>CPU-Usage</h4>
+                                            CPU Usage is an analytic dashboard app that provides anyone with the
+                                            insights of a CPU load in real time.
+                                            <br><br>
+                                            <div class="skillsuse">Skills: React, Node.js/Express, PostgreSQL, RESTFUL,
+                                                Recharts Library, Zingchart Library, and Javascript</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/askflow1111/CPU-Usage" target="_blank">
+                                <div class="github">See On Github</div>
+                            </a>
+                        </div>
+
+                        <div class="port1 react-weather-app portfolio featured react ">
+                            <a href="https://react-weather-app-101.netlify.com/" target="_blank">
+                                <div class="overlay-container"> <img src="https://raw.githubusercontent.com/askflow1111/React-Weather-App/master/weatherapp.png"
+                                        alt="React Weather App Project Picture" class="image" />
+                                    <div class="overlay">
+                                        <div class="text wrap-text">
+                                            <h4>React-Weather-App</h4> React Weather App finds your weather based on
+                                            your zip
+                                            code or city name! <br> <br>
+                                            <div class="skillsuse">Skills: React, Javascript, and Open Weather Map API</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/askflow1111/React-Weather-App" target="_blank">
+                                <div class="github">See On Github</div>
+                            </a>
+                        </div>
+
+                        <div class="port1 php-contact-form portfolio php">
+                            <a href="http://muhammadusman.tk/projects/Php-Contact-Form/index.html" target="_blank">
+                                <div class="overlay-container"> <img src="https://github.com/askflow1111/Php-Contact-Form/blob/master/php-contact-form.png?raw=true"
+                                        alt="PHP Contact Form Project Image" class="image" />
+                                    <div class="overlay">
+                                        <div class="text wrap-text">
+                                            <h4>PHP Contact-Form</h4> Contact-Form which lets people submit the contact
+                                            form,
+                                            after putting their information. It delivers the message to host with
+                                            sender's
+                                            information.
+                                            <br> <br>
+                                            <div class="skillsuse">Skills: PHP, Iframe, CSS, and HTML</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/askflow1111/Php-Contact-Form" target="_blank">
+                                <div class="github">See On Github</div>
+                            </a>
+                        </div>
+
+                        <div class="port1 react-news-app portfolio react">
+                            <a href="https://react-newsapp.netlify.com/" target="_blank">
+                                <div class="overlay-container"> <img src="https://raw.githubusercontent.com/askflow1111/NewsApp-In-React/master/NewsApp.png"
+                                        alt="React News App Project Picture" class="image" />
+                                    <div class="overlay">
+                                        <div class="text wrap-text">
+                                            <h4>React-Hacker-News-App</h4> Hackers News React App. It uses Hacker News
+                                            API and
+                                            fetches the top 500 articles using react. <br> <br>
+                                            <div class="skillsuse">Skills: React, Javascript, and Open Hacker News API</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/askflow1111/NewsApp-In-React" target="_blank">
+                                <div class="github">See On Github</div>
+                            </a>
+                        </div>
+
+                        <div class="port1 calc portfolio javascript">
+                            <a href="https://askflow1111.github.io/Calculator/" target="_blank">
+                                <div class="overlay-container"> <img id="calcimg" src="https://raw.githubusercontent.com/askflow1111/Calculator/master/images/calc.png"
+                                        alt="portfolio1" class="image no-border-radius" />
+                                    <div class="overlay">
+                                        <div class="text">
+                                            <h4>Calculator</h4>That Works Like A Charm! <br> <br>
+                                            <div class="skillsuse">Skills: Javascript, Css, Html</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/askflow1111/Calculator" target="_blank">
+                                <div class="github">See On Github</div>
+                            </a>
+                        </div>
+
+                        <div class="port1 wordpress portfolio wordpress">
+                            <a href="http://muhammadusman.tk/wordpress/" target="_blank">
+                                <div class="overlay-container"> <img src="images/wordpress-screenshot.png" alt="Wordpress Articles Library's Website Picture"
+                                        class="image no-border-radius" />
+                                    <div class="overlay">
+                                        <div class="text wrap-text">
+                                            <h4>Articles Library WordPress</h4>
+                                            Articles Library is a WordPress website, which has articles based on
+                                            categories, pages, and different wordpress plugins.
+                                            <br><br>
+                                            <div class="skillsuse">Skills: WordPress, and Designing</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="http://muhammadusman.tk/wordpress/wp-login.php?ForChecking=ture" target="_blank">
+                                <div class="github">See Admin Area</div>
+                            </a>
+                        </div>
+
+
+                        <div class="port1 tankgame portfolio featured javascript">
+                            <a href="https://askflow1111.github.io/Tank-Game/" target="_blank">
+                                <div class="overlay-container"> <img src="https://raw.githubusercontent.com/askflow1111/Tank-Game/master/images/tankgame.png"
+                                        alt="Tank Game Image" />
+                                    <div class="overlay todolistoverlay">
+                                        <div class="text">
+                                            <h4>Two Players Tank Game</h4>
+                                            <div class="texts"> A Tank Game Where Two Players Fight With Each Other!
+                                                <br> Only Way To Win Is
+                                                To Destroy Another Tank <br><br> Control The Tank, Turret, and Fire
+                                                With Your
+                                                Keys <br><br>
+                                                <div class="skillsuse">Skills: Javascript, Jquery, DOM, Css and Html</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/askflow1111/Tank-Game" target="_blank">
+                                <div class="github">See On Github</div>
+                            </a>
+                        </div>
+
+                        <div class="port1 tic portfolio javascript">
+                            <a href="https://askflow1111.github.io/TicTacToe/" target="_blank">
+                                <div class="overlay-container"> <img src="https://raw.githubusercontent.com/askflow1111/TicTacToe/master/images/tictactoe.png"
+                                        alt="Tic Tac Toe" />
+                                    <div class="overlay ticoverlay">
+                                        <div class="text texts">
+                                            <h4>Tic Tac Toe!</h4> You Thought You Are Good In Tic Tac Toe? <br> Because
+                                            Now You
+                                            Can Play Player Vs Player! <br> <br>
+                                            <div class="skillsuse">Skills: Javascript, Css, Html</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/askflow1111/TicTacToe" target="_blank">
+                                <div class="github">See On Github</div>
+                            </a>
+                        </div>
+
+                        <div class="port1 car portfolio javascript">
+                            <a href="https://askflow1111.github.io/Car-Game/" target="_blank">
+                                <div class="overlay-container"> <img src="https://raw.githubusercontent.com/askflow1111/Car-Game/master/images/cargame.png"
+                                        alt="portfolio3" />
+                                    <div class="overlay caroverlay">
+                                        <div class="text">
+                                            <h4>Car Game!</h4> Use Your Keys And Move Your Car <br> While You Complete
+                                            The Track!
+                                            <br> Make Sure To Drive On Road! <br> <br>
+                                            <div class="skillsuse">Skills: Javascript, Css, Html, Audacity</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/askflow1111/Car-Game" target="_blank">
+                                <div class="github">See On Github</div>
+                            </a>
+                        </div>
+
+                        <div class="port1 keycode portfolio javascript">
+                            <a href="https://askflow1111.github.io/card-game/" target="_blank">
+                                <div class="overlay-container"> <img src="https://raw.githubusercontent.com/askflow1111/card-game/master/images/cardgame.jpg"
+                                        alt="Card Game Picture" />
+                                    <div class="overlay keycodeoverlay">
+                                        <div class="text">
+                                            <h4>Card Game!</h4> Get Points By Matching Pair Cards, <br>Or Lose Points
+                                            If You
+                                            Get Wrong.
+                                            <br> The Scores are recorded on a moving rope! <br><br> Hint: The Cards are
+                                            random
+                                            each time game starts <br><br>
+                                            <div class="skillsuse">Skills: Javascript, DOM, Css, Html</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/askflow1111/card-game" target="_blank">
+                                <div class="github">See On Github</div>
+                            </a>
+                        </div>
+
+                        <div class="port1 rock portfolio javascript">
+                            <a href="https://askflow1111.github.io/rockpaperscissors/" target="_blank">
+                                <div class="overlay-container"> <img src="https://raw.githubusercontent.com/askflow1111/rockpaperscissors/master/images/rockgame.png"
+                                        alt="portfolio2" />
+                                    <div class="overlay rockoverlay">
+                                        <div class="text">
+                                            <h4>Rock Paper Scissor</h4>Play Rock Paper Scissor Against Computer! <br>
+                                            <br>
+                                            <div class="skillsuse">Skills: Javascript, Css, Html</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/askflow1111/rockpaperscissors" target="_blank">
+                                <div class="github">See On Github</div>
+                            </a>
+                        </div>
+
+                        <div class="port1 todolist portfolio javascript">
+                            <a href="https://askflow1111.github.io/TodoList/" target="_blank">
+                                <div class="overlay-container"> <img src="https://raw.githubusercontent.com/askflow1111/TodoList/master/images/todolist.png"
+                                        alt="portfolio3" />
+                                    <div class="overlay todolistoverlay">
+                                        <div class="text">
+                                            <h4>To Do List</h4>
+                                            <div class="texts"> Now Making Your Life Easier <br> Add Your Tasks To The
+                                                To-Do-List! <br> And Reorder
+                                                Them Later! <br> <br>
+                                                <div class="skillsuse">Skills: Javascript, Jquery, Css, Html</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/askflow1111/TodoList" target="_blank">
+                                <div class="github">See On Github</div>
+                            </a>
+                        </div>
+
+                        <div class="port1 keycode portfolio javascript">
+                            <a href="https://askflow1111.github.io/JavascriptKeyCodes/" target="_blank">
+                                <div class="overlay-container"> <img src="https://raw.githubusercontent.com/askflow1111/JavascriptKeyCodes/master/images/keycode.png"
+                                        alt="Keycode project picture" />
+                                    <div class="overlay keycodeoverlay">
+                                        <div class="text">
+                                            <h4>JavaScript KeyCode</h4> Introducing JavaScript KeyCode! <br> Just Press
+                                            Any Key
+                                            To Get the KeyCode <br> And Use Them In Your Script <br> <br>
+                                            <div class="skillsuse">Skills: Javascript, DOM, Css, Html</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/askflow1111/JavascriptKeyCodes" target="_blank">
+                                <div class="github">See On Github</div>
+                            </a>
+                        </div>
+                        <div class="port1 keycode portfolio javascript">
+                            <a href="https://askflow1111.github.io/NewsApp/" target="_blank">
+                                <div class="overlay-container"> <img src="https://raw.githubusercontent.com/askflow1111/NewsApp-In-React/master/NewsApp.png"
+                                        alt="Hackers News In Javascrtipt Project Image" />
+                                    <div class="overlay keycodeoverlay">
+                                        <div class="text wrap-text">
+                                            <h4>JavaScript Hacker-News-App</h4> Hackers News App In Javascript. It uses
+                                            Hacker
+                                            News API and fetches the top 500 articles using Javascript. <br> <br>
+                                            <div class="skillsuse">Skills: Javascript, DOM, and Open Hacker News API</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/askflow1111/NewsApp" target="_blank">
+                                <div class="github">See On Github</div>
+                            </a>
+                        </div>
+                        <div class="port1 react-weather-app portfolio javascript">
+                            <a href="https://askflow1111.github.io/WeatherApp/" target="_blank">
+                                <div class="overlay-container"> <img src="https://raw.githubusercontent.com/askflow1111/React-Weather-App/master/weatherapp.png"
+                                        alt="React Weather App Project Picture" class="image" />
+                                    <div class="overlay">
+                                        <div class="text wrap-text">
+                                            <h4>Javascript Weather App</h4> Javascript Weather App finds your weather
+                                            based on
+                                            your zip code or city name! <br> <br>
+                                            <div class="skillsuse">Skills: Javascript, DOM, and Open Weather Map API</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/askflow1111/WeatherApp" target="_blank">
+                                <div class="github">See On Github</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="contact" class="contactpage">
+        <h2>Contact</h2>
+        <div class="contact-body">
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/MuhammadU/" target="_blank">https://www.linkedin.com/in/MuhammadU/</a>
+                <a href="https://github.com/askflow1111/" target="_blank">https://github.com/askflow1111/</a>
+                <a href="mailto:muhammadusmanrao101@gmail.com">muhammadusmanrao101@gmail.com</a>
+            </div>
+            <div class="line"></div>
+            <div class="form-container">
+                <iframe src="form/form.html" frameborder="0"></iframe>
+            </div>
+    </section>
+</body>
+
+</html>
